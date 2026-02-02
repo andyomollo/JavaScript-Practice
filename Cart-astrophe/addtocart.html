@@ -5,20 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping List</title>
      <link rel ="stylesheet" href = "addtocart.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div class="container">
-        <img src="/Cart-astrophe/addtocart.jpeg" class="img" alt="Avatar"/>
+
+        <div class="header">
+            <button onclick="history.back()" class="back-button">&#8592;</button>
+            <p style="font-size: 18px; font-weight:400;"> Andie.go's Wishlist</p>
+
+                <div class="header-right">
+                    <button onclick="openSearch()" class="search-button"> &#8981; </button>
+                    <button onclick="shareProduct()" class="share-button" type="button">&#8679;</button>        
+                </div>
+        </div>
+        
+        <img src="/Cart-astrophe/earbuds.jpeg" class="img" alt="Earbud Product Image"/>
+
+        <h2 style="text-align: center; margin: 20px 0;"> Marshall's Wireless Earbuds</h2>
+
+        <p class="price-description"> Free $99.99</p>
+
+        <p class="product-description">Marshall earbuds deliver powerful, balanced sound in a sleek, true-wireless design inspired by the brand’s iconic rock heritage. 
+        With clear highs, rich mids, and punchy bass, they offer an immersive listening experience for music, calls, and everyday use. 
+        Compact, comfortable, and built with modern Bluetooth technology, Marshall earbuds combine classic style with reliable performance on the go.</p>
+
+        <div class="cart-counter">
+            Items in cart: <span id="cart-count">0</span>
+        </div>
 
         <div class="button-container">
-            <button onclick="console.log(`Item: ${cartItem}`);" class="cart-button" type="button" >
+            <button onclick="cartItem+=1; console.log(`Item: ${cartItem}`);" class="cart-button" type="button" >
                 Add to Cart
             </button>
-            <button onclick="console.log(`Reset: ${cartItem});" class="Reset-button" type="button">
-                Reset 
-            </button>
-            <button class="dropdown-button" type="button">
-                &#9660;  
+            <button onclick="console.log(`Reset: ${cartItem}`);" class="remove-button" type="button">
+                 &#8722;
             </button>
         </div>
     </div>

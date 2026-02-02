@@ -1,4 +1,5 @@
 .container {
+    background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 30%, #c2185b 70%, #ffeef8 100%);
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -7,7 +8,14 @@
     margin:50px auto; /* centers the container */
     padding: 60px 10px;
 }
-
+.header{
+    display: flex;
+    gap: 100px;
+    justify-content:space-between; /* Centers the buttons */
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
 .img{
     height:150px;
     width :150px;
@@ -16,7 +24,80 @@
     object-fit:cover ;
     display: block;
 }
+.felipa-regular {
+  font-family: "Felipa", serif;
+  font-weight: 200;
+  font-style: normal;
+}
 
+.price-description {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(122, 88, 234);
+    margin: 10px 0;
+}
+
+.product-description {
+    text-align: center;
+    color: #666;
+    margin: 15px 20px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.cart-counter {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.back-button{
+    background-color: rgb(228, 225, 235);
+    color:white;
+    gap:8px;
+    padding:10px 20px;
+    border:none;
+    border-radius:3px;
+    font-weight:500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header-right {
+    display: flex;
+    gap: 5px; /* Even tighter spacing */
+    align-items: center;
+}
+
+.search-button {
+    background-color: rgb(228, 225, 235);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.share-button {
+    background-color:rgb(228, 225, 235);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    line-height: 1.9;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 .button-container{
     display: flex;
     gap: 10px;
@@ -26,34 +107,27 @@
 }
 
 .cart-button{
-    background-color : rgb(242, 70, 70);
+    background-color: #b480be;
     color : white;
     border: 0;
     text-align: center;
     color: white;
     border-radius: 10px;
     line-height: 2;
-    padding: 5px 12px;
-    
+    padding: 5px 12px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-.dropdown-button:hover{
+.remove-button:hover{
     background: #7b93ad;
 }
-.Reset-button{
-    background-color : rgb(162, 155, 155);
-    border: 0;
-    border-radius: 10px;
-    color : white;
-    line-height: 2;
-    padding: 5px 10px;
-}
 
-.dropdown-button{
+.remove-button{
     background-color : rgb(162, 155, 155);
     border: 0;
-    border-radius: 13px;
+    border-radius: 45%;
     color : black;
-    line-height: 1.7;
+    line-height: 1.9;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
