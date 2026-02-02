@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-     <link rel ="stylesheet" href = "profile.css">
+    <title>Shopping List</title>
+     <link rel ="stylesheet" href = "addtocart.css">
 </head>
 <body>
     <div class="container">
-        <img src="/profile/wnba.jpeg" class="img" alt="Avatar"/>
+        <img src="/Cart-astrophe/addtocart.jpeg" class="img" alt="Avatar"/>
 
         <div class="button-container">
-            <button onclick="console.log(`Follower: ${newFollower}`);" class="follow-button" type="button" >
-                Follow Me
+            <button onclick="console.log(`Item: ${cartItem}`);" class="cart-button" type="button" >
+                Add to Cart
             </button>
-            <button class="message-button" type="button">
-                Message 
+            <button onclick="console.log(`Reset: ${cartItem});" class="Reset-button" type="button">
+                Reset 
             </button>
             <button class="dropdown-button" type="button">
                 &#9660;  
@@ -23,7 +23,7 @@
         </div>
     </div>
 <script>
-    let newFollower = 0;
+    let cartItem = 0;
 </script>
 </body>
 </html>
