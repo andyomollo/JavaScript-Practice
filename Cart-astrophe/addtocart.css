@@ -100,7 +100,7 @@
 }
 .button-container{
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content:center; /* Centers the buttons */
     align-items: center;
     margin-top:20px;
@@ -117,6 +117,11 @@
     padding: 5px 12px; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
+.cart-button:hover{
+    background:rgb(162, 155, 155);
+}
+
 .remove-button:hover{
     background: #7b93ad;
 }
@@ -124,9 +129,9 @@
 .remove-button{
     background-color : rgb(162, 155, 155);
     border: 0;
-    border-radius: 45%;
+    border-radius: 50% 10% / 50% 50%;
     color : black;
-    line-height: 1.9;
+    line-height: 2;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
