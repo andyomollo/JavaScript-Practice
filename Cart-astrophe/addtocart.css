@@ -1,13 +1,19 @@
 .container {
-    background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 30%, #c2185b 70%, #ffeef8 100%);
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+
     max-width: 600px;
     min-height: 400px;
-    margin:50px auto; /* centers the container */
-    padding: 60px 10px;
+    margin: 50px auto;
+    padding: 60px 20px;
 }
+
 .header{
     display: flex;
     gap: 100px;
@@ -67,13 +73,17 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+.back-button:hover{
+    background:rgb(162, 155, 155);
+}
+
 .header-right {
     display: flex;
     gap: 5px; /* Even tighter spacing */
     align-items: center;
 }
 
-.search-button {
+.wishlist-button {
     background-color: rgb(228, 225, 235);
     color: white;
     border: none;
@@ -84,6 +94,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.wishlist-button:hover{
+    background:rgb(162, 155, 155);
 }
 
 .share-button {
@@ -97,6 +111,10 @@
     transition: all 0.3s ease;
     font-size: 14px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.share-button:hover{
+    background:rgb(162, 155, 155);
 }
 .button-container{
     display: flex;
@@ -122,10 +140,6 @@
     background:rgb(162, 155, 155);
 }
 
-.remove-button:hover{
-    background: #7b93ad;
-}
-
 .remove-button{
     background-color : rgb(162, 155, 155);
     border: 0;
@@ -136,3 +150,6 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+.remove-button:hover{
+    background: #e01515;
+}

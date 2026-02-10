@@ -4,50 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catastrophic Ears</title>
-     <link rel ="stylesheet" href = "addtocart.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="addtocart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
     <div class="container">
 
-        <div class="header">
-            <button onclick="history.back()" class="back-button">&#8592;</button>
-            <p style="font-size: 18px; font-weight:400;"> Andie.go's Wishlist</p>
+        <header class="header">
+            <button class="back-button" id="backBtn">&#8592;</button>
+            <p class="header-title">Andie.go's Wishlist</p>
 
-                <div class="header-right">
-                    <button onclick="openSearch()" class="search-button"> &#8981; </button>
-                    <button onclick="shareProduct()" class="share-button" type="button">&#8679;</button>        
-                </div>
-        </div>
-        
-        <img src="/Cart-astrophe/earbuds.jpeg" class="img" alt="Earbud Product Image"/>
+            <div class="header-right">
+                <button class="wishlist-button" type="button">&#9825;</button>
+                <button class="share-button" type="button">&#8679;</button>
+            </div>
+        </header>
 
-        <h2 style="text-align: center; margin: 20px 0;"> Marshall's Wireless Earbuds</h2>
+        <img src="/Cart-astrophe/earbuds.jpeg" class="img" alt="Marshall Wireless Earbuds">
 
-        <p class="price-description"> Free $99.99</p>
+        <h2 class="product-title">Marshall's Wireless Earbuds</h2>
 
-        <p class="product-description">Marshall earbuds deliver powerful, balanced sound in a sleek, true-wireless design inspired by the brand’s iconic rock heritage. 
-        With clear highs, rich mids, and punchy bass, they offer an immersive listening experience for music, calls, and everyday use. 
-        Compact, comfortable, and built with modern Bluetooth technology, Marshall earbuds combine classic style with reliable performance on the go.</p>
+        <p class="price-description">Free $99.99</p>
+
+        <p class="product-description">
+            Marshall earbuds deliver powerful, balanced sound in a sleek, true-wireless design inspired by the brand’s iconic rock heritage.
+            With clear highs, rich mids, and punchy bass, they offer an immersive listening experience for music, calls, and everyday use.
+            Compact, comfortable, and built with modern Bluetooth technology.
+        </p>
 
         <div class="cart-counter">
             Items in cart: <span id="cart-count">0</span>
         </div>
 
-        <div class="button-container">
-            <button onclick="cartItem+=1; console.log(`Item: ${cartItem}`);" class="cart-button" type="button" >
+        <div class="button-container"> 
+            <button id="addToCartBtn" class="cart-button" type="button">
                 Add to Cart
             </button>
-            <button onclick="console.log(`Reset: ${cartItem}`);" class="remove-button" type="button">
-                 &#8722;
+            <button id="removeFromCartBtn" class="remove-button" type="button">
+                &#8722;
             </button>
         </div>
+
     </div>
-<script>
-    let cartItem = 0;
-</script>
+
+    <script>
+        //creating a variable cartItemcount and assigning a value of 0 also known as state
+        let cartItemCount = 0;
+
+        // javascript is able to detect clicks, change texts and disable button.
+        const cartCountElement = document.getElementById("cart-count");
+        const addToCartBtn = document.getElementById("addToCartBtn"); //added id to html of cart-count, add to cart, remove button and back button.
+        const removeFromCartBtn = document.getElementById("removeFromCartBtn");
+        const backBtn = document.getElementById("backBtn");
+
+        // adding Functions
+        function updateCartCount() { //to update the UI every time the count changes
+            cartCountElement.textContent = cartItemCount;
+        }
+
+        function addItemToCart() {
+            cartItemCount += 1;
+            updateCartCount();
+        }
+
+        function removeItemFromCart() {
+            if (cartItemCount > 0) {//defensive coding
+                cartItemCount -= 1;
+                updateCartCount();
+            }
+        }
+
+        // Event listeners: when this button is clicked, run the function
+        addToCartBtn.addEventListener("click", addItemToCart);
+        removeFromCartBtn.addEventListener("click", removeItemFromCart);
+        backBtn.addEventListener("click", () => history.back());
+    </script>
+
 </body>
 </html>
