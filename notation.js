@@ -1,4 +1,5 @@
 // Dot notation vs bracket notation.
+//you can not use variables in dot notation.
 
 let myDict = {
     cars : "Jimny",
