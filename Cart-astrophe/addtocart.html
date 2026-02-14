@@ -47,6 +47,12 @@
             <button id="removeFromCartBtn" class="remove-button" type="button">
                 &#8722;
             </button>
+            <select class="drop-down" id="dropBtn">
+                <option value="red"> Red </option>
+                <option value="blue" > Blue </option>
+                <option value="grey"> Grey </option>
+                <option value="white"> White </option>
+            </select>
         </div>
 
     </div>
@@ -60,6 +66,7 @@
         const addToCartBtn = document.getElementById("addToCartBtn"); //added id to html of cart-count, add to cart, remove button and back button.
         const removeFromCartBtn = document.getElementById("removeFromCartBtn");
         const backBtn = document.getElementById("backBtn");
+        const dropBtn = document.getElementById("dropBtn");
 
         // adding Functions
         function updateCartCount() { //to update the UI every time the count changes
@@ -81,7 +88,12 @@
         // Event listeners: when this button is clicked, run the function
         addToCartBtn.addEventListener("click", addItemToCart);
         removeFromCartBtn.addEventListener("click", removeItemFromCart);
-        backBtn.addEventListener("click", () => history.back());
+        backBtn.addEventListener("click", () => history.back()); //()=> means function
+        dropBtn.addEventListener("DomContentloaded", ()=>{
+            document.querySelector('select').onchange = ()=> {
+                document.querySelector('.img').style.color= this.value;
+            }
+        })
     </script>
 
 </body>
