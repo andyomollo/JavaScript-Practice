@@ -61,7 +61,7 @@
         //creating a variable cartItemcount and assigning a value of 0 also known as state
         let cartItemCount = 0;
 
-        // javascript is able to detect clicks, change texts and disable button.
+        // javascript is able to detect clicks, change texts and disable button. add them to a variable
         const cartCountElement = document.getElementById("cart-count");
         const addToCartBtn = document.getElementById("addToCartBtn"); //added id to html of cart-count, add to cart, remove button and back button.
         const removeFromCartBtn = document.getElementById("removeFromCartBtn");
@@ -89,11 +89,6 @@
         addToCartBtn.addEventListener("click", addItemToCart);
         removeFromCartBtn.addEventListener("click", removeItemFromCart);
         backBtn.addEventListener("click", () => history.back()); //()=> means function
-        dropBtn.addEventListener("DomContentloaded", ()=>{
-            document.querySelector('select').onchange = ()=> {
-                document.querySelector('.img').style.color= this.value;
-            }
-        })
     </script>
 
 </body>
