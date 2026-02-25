@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Winddow</title>
+</head>
+<body>
+    <<p>one</p>
+    <p>two</p>
+    <p>three</p>
+    <p>four</p>
+    <p>five</p>
+    <p>six</p>
+    <p>seven</p>
+    <p>eight</p>
+    <p>nine</p>
+    <p>ten</p>
+    <p>eleven</p>
+    <p>twelve</p>
+    <p>thirteen</p>
+    <p>fourteen</p>
+    <p>fifteen</p>
+    <p>sixteen</p>
+    <p>seventeen</p>
+    <p>eighteen</p>
+    <p>nineteen</p>
+    <p>twenty</p>
+    <p>twenty-one</p>
+    <p>twenty-two</p>
+    <p>twenty-three</p>
+    <p>twenty-four</p>
+    <p>twenty-five</p>
+    <p>twenty-six</p>
+    <p>twenty-seven</p>
+    <p>twenty-eight</p>
+    <p>twenty-nine</p>
+    <p>thirty</p>
+    <p>thirty-one</p>
+    <p>thirty-two</p>
+    <p>thirty-three</p>
+    <p>thirty-four</p>
+    <p>thirty-five</p>
+    <p>thirty-six</p>
+    <p>thirty-seven</p>
+    <p>thirty-eight</p>
+    <p>thirty-nine</p>
+    <p>forty</p>
+    <p>forty-one</p>
+    <p>forty-two</p>
+    <p>forty-three</p>
+    <p>forty-four</p>
+    <p>forty-five</p>
+    <p>forty-six</p>
+    <p>forty-seven</p>
+    <p>forty-eight</p>
+    <p>forty-nine</p>
+    <p>fifty</p>
+
+<script>
+    // this is good practice so the DOM is fully loaded before your script runs by placing script afterwards
+    window.onscroll = ()=>{
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight){
+            document.querySelector('body').style.background = 'red';
+        }else{
+            document.querySelector('body').style.background = 'white';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+</head>
+<body>
+    <h1>
+        Goodbye my Lover, Goodbye my friend!
+    </h1>
+    <button> Click Me</button>
+    <style>
+        @keyframes move {
+            from{
+                left: 0%;
+            }
+            to{
+                right: 50%;
+            }
+        }
+        h1{
+             position: relative;
+            animation-fill-mode: forwards;
+            animation-name: move;
+            animation-duration: 5s;
+           
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+
+            let h1 = document.querySelector('h1');
+            h1.style.animationPlayState = 'paused';
+
+            document.querySelector('button').onclick = ()=>{
+                if(h1.style.animationPlayState === 'paused'){
+                    h1.style.animationPlayState = 'running';
+                }else{
+                    h1.style.animationPlayState = 'paused';
+                }
+            }
+
+        });
+    </script>
+</body>
+</html>
